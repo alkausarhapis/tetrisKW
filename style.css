@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(0deg, #6139a5 0%, #4570df 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#gBoard {
+  width: 242px;
+  height: 481px;
+  border: 10px solid rgb(89, 89, 230);
+  margin: 0 auto;
+  background-color: black;
+  position: relative;
+  box-shadow: 0 4px 12px black;
+  background-image: linear-gradient(rgb(40, 40, 40) 2px, transparent 0),
+    linear-gradient(90deg, rgb(40, 40, 40) 2px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.block {
+  width: 24px;
+  height: 24px;
+  border: 1.1px solid black;
+  position: absolute;
+  box-shadow: inset 0 0 0 1px black, inset 6px 6px 0 rgba(255, 255, 255, 0.57);
+}
+
+.ghost {
+  width: 24px;
+  height: 24px;
+  border: 1px solid black;
+  position: absolute;
+  box-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.3);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
